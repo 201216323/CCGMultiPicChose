@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ccgmultipicchose.MainActivity">
+    <RelativeLayout
+        android:id="@+id/id_bottom_ly"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ff5533"
+        android:clickable="true"
+        >
+        <ImageView
+            android:id="@+id/image_select_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/drawable_return_image"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/text_select_gallary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp_10"
+            android:text="相册"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="评价页面"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17" />
+
+
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/edit_main_input"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/id_bottom_ly"
+        android:background="#ffffff"
+        android:gravity="top"
+        android:hint="发表你的评论吧。。。"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_main_input"
+        android:gravity="right"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/text_main_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/text_main_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/100"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+    <com.example.ccgmultipicchose.NoScrollGridView
+        android:id="@+id/noScrollGridView_main_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_main"
+        android:layout_marginLeft="5dp"
+        android:background="#ffffff"
+        android:layout_marginRight="5dp"
+        android:horizontalSpacing="3dp"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="5dp"
+        >
+    </com.example.ccgmultipicchose.NoScrollGridView>
+
+
+
+    <TextView
+        android:id="@+id/text_main_fabu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:text="发布图片"
+        android:gravity="center"
+        android:background="#e6e6e6"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        android:textColor="#28bf5f"
+        />
+</RelativeLayout>
